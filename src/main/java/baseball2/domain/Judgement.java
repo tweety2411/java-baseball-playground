@@ -6,13 +6,14 @@ public class Judgement {
 
   public int correctCount(List<Integer> computers, List<Integer> player) {
     int result = 0;
-    for(int i = 0; i < computers.size(); i++) {
-      if(player.contains(computers.get(i))) result++;
+    for (Integer computer : computers) {
+      if (player.contains(computer))
+        result++;
     }
     return result;
   }
 
-  public boolean hasPlace(List<Integer> computer, int placeNumber, int number) {
-    return false;
+  public boolean hasPlace(List<Integer> computer, int placeIndex, int number) {
+    return computer.get(placeIndex) == number;
   }
 }
